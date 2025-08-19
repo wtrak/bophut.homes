@@ -48,6 +48,12 @@
       background:var(--accent); color:#fff; text-decoration:none; font-weight:700;
       border:1px solid rgba(255,255,255,.12); margin-top:6px
     }
+    /* CTR additions */
+    .cta-wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:8px}
+    .cta-ghost{
+      background:transparent;border:1px solid rgba(255,255,255,.55);color:#fff
+    }
+    .fineprint{font-size:12px;opacity:.8;margin-top:6px}
     .badge{position:fixed; top:12px; left:12px; z-index:3; font-weight:800; letter-spacing:.2px;
       background:var(--glass); padding:8px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.15)}
     .foot{position:fixed; bottom:12px; right:12px; z-index:3; font-size:12px; opacity:.9;
@@ -68,17 +74,25 @@
         <div class="row"><span class="dot"></span><span>Mix of sea-view villas and modern apartments; attractive nightly rates in peak season.</span></div>
         <div class="row"><span class="dot"></span><span>Proximity to schools, clinics, and amenities—great for medium-term stays.</span></div>
       </div>
-      <a class="cta" href="https://kohsamui.investments/?utm_source=bophut.homes&utm_medium=referral&utm_campaign=cta">
-        View Homes &nbsp;→
-      </a>
+
+      <!-- CTR: primary + secondary CTA + micro-copy -->
+      <div class="cta-wrap">
+        <a class="cta" href="https://kohsamui.investments/?utm_source=bophut.homes&utm_medium=referral&utm_campaign=cta">
+          View Homes &nbsp;→
+        </a>
+        <a class="cta cta-ghost" href="https://kohsamui.investments/guide.html?utm_source=bophut.homes&utm_medium=referral&utm_campaign=preview_guide">
+          Preview the Guide
+        </a>
+      </div>
+      <div class="fineprint">2-minute preview • Private intake available if you want tailored matches</div>
     </div>
 
     <div class="foot">
-  Private intake • No spam • HTTPS secure
-  <div style="font-size:11px;opacity:.6;margin-top:4px">
-    <a href="/faq" style="color:#aaa;text-decoration:none">FAQ</a> • 
-    <a href="/guide" style="color:#aaa;text-decoration:none">Guide</a>
-  </div>
-</div>
+      Private intake • No spam • HTTPS secure
+      <div style="font-size:11px;opacity:.6;margin-top:4px">
+        <a href="/faq" style="color:#aaa;text-decoration:none">FAQ</a> • 
+        <a href="/guide" style="color:#aaa;text-decoration:none">Guide</a>
+      </div>
+    </div>
 </body>
 </html>
