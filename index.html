@@ -7,6 +7,8 @@
   <meta name="description" content="Buy in Bophut’s Fisherman’s Village, Koh Samui—walkable lifestyle and strong rental demand. See vetted homes & villas matched to your goals." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://bophut.homes/" />
+  <link rel="preconnect" href="https://kohsamui.investments">
+  <link rel="dns-prefetch" href="https://kohsamui.investments">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Bophut Homes • Fisherman’s Village, Koh Samui" />
@@ -50,9 +52,7 @@
     }
     /* CTR additions */
     .cta-wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:8px}
-    .cta-ghost{
-      background:transparent;border:1px solid rgba(255,255,255,.55);color:#fff
-    }
+    .cta-ghost{background:transparent;border:1px solid rgba(255,255,255,.55);color:#fff}
     .fineprint{font-size:12px;opacity:.8;margin-top:6px}
     .badge{position:fixed; top:12px; left:12px; z-index:3; font-weight:800; letter-spacing:.2px;
       background:var(--glass); padding:8px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.15)}
@@ -77,14 +77,28 @@
 
       <!-- CTR: primary + secondary CTA + micro-copy -->
       <div class="cta-wrap">
-        <a class="cta" href="https://kohsamui.investments/?utm_source=bophut.homes&utm_medium=referral&utm_campaign=cta">
+        <a id="cta-primary" class="cta" href="https://kohsamui.investments/?utm_source=bophut.homes&utm_medium=referral&utm_campaign=cta">
           View Homes &nbsp;→
         </a>
-        <a class="cta cta-ghost" href="https://kohsamui.investments/guide.html?utm_source=bophut.homes&utm_medium=referral&utm_campaign=preview_guide">
+        <a id="cta-guide" class="cta cta-ghost" href="https://kohsamui.investments/guide.html?utm_source=bophut.homes&utm_medium=referral&utm_campaign=preview_guide">
           Preview the Guide
         </a>
       </div>
       <div class="fineprint">2-minute preview • Private intake available if you want tailored matches</div>
+
+      <!-- CTA click tracking -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function(){
+          var p = document.getElementById('cta-primary');
+          var g = document.getElementById('cta-guide');
+          if (p) p.addEventListener('click', function(){
+            try { gtag('event','cta_click',{event_category:'engagement',event_label:'bophut.homes_primary'}); } catch(e){}
+          });
+          if (g) g.addEventListener('click', function(){
+            try { gtag('event','cta_click',{event_category:'engagement',event_label:'bophut.homes_guide'}); } catch(e){}
+          });
+        });
+      </script>
     </div>
 
     <div class="foot">
